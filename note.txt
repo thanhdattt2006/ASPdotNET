@@ -12,3 +12,11 @@ endpoint: hiểu đơn giản là địa chỉ truy cập cụ thể trong web, 
 1) http method (GET, POST, PUT, DELETE,...) phương thức xác dịnh hành động của endpoint
 2) URL (Uniform Resource Locator) địa chỉ cụ thể để truy cập vào website
 3) Handler: code sử lý được gọi.
+4) Middleware: là phần mềm trung gian nằm giữa client và server, giúp xử lý các yêu cầu và phản hồi trước khi chúng đến đích cuối cùng. Middleware có thể thực hiện các tác vụ như xác thực, ghi log, xử lý lỗi, và nhiều chức năng khác để cải thiện hiệu suất và bảo mật của ứng dụng web.
+
+www.google.com
+<==> www.google.com/index.html
+<==> www.google.com/controller/action
+
+1) khi tạo controller nào, view mặc định sẽ có thư mục của controller đó
+2) action trong controller sẽ tương ứng với view có tên giống action đó
