@@ -1,0 +1,14 @@
+﻿trong c# có mấy phím tắt nên biết khi học web
+
+ctrl + . : gợi ý code nhắc nhở code
+
+alt + . hoặc alt + , : nhờ AI gợi ý code tiếp theo là gì
+
+alt + f1: cho phép coi sử dụng var là gì, gợi ý các tham số trong phương thức của c# có sẵn
+
+==================================================
+
+endpoint: hiểu đơn giản là địa chỉ truy cập cụ thể trong web, bao gồm:
+1) http method (GET, POST, PUT, DELETE,...) phương thức xác dịnh hành động của endpoint
+2) URL (Uniform Resource Locator) địa chỉ cụ thể để truy cập vào website
+3) Handler: code sử lý được gọi.
