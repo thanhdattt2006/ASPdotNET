@@ -1,1 +1,52 @@
-﻿<h1>This is Account View</h1>
+﻿<link rel="stylesheet" href="~/css/style.css" />
+<script src="~/js/main.js" defer></script>
+<h1>This is Account View</h1>
+<br />
+<p>Learn Razor Engine Syntaxs to contact with HTML components</p>
+<br />
+
+@* 
+	1) @* ghi chú trong file cshtml, nó sẽ ko hiển thị trên trình duyệt
+	
+	2) @{}: dùng để viết code c# trong file cshtml
+
+	3) các câu lệnh if, for, foreach, switch, while, do...while... đều có thể sử dụng trong file cshtml mà không cần phải viết trong @{} nhưng phải đảm bảo rằng các câu lệnh này phải có dấu ngoặc nhọn {} để phân biệt với các câu lệnh khác
+
+	4) @tên_biến: dùng để hiển thị giá trị của biến trong file cshtml
+
+	5) @(): dùng để hiển thị giá trị, hay tính toán của biểu thức C#
+*@
+
+@{
+	var id = "1";
+	var name = "Dave";
+	var year = 2006;
+	var gender = true;
+	var pic = Url.Content("~/images/user.svg"); // linh hoạt nếu trong đường dẫn có /, \ hoặc nếu có thay đổi đường dẫn thì chỉ cần thay đổi ở đây mà ko cần phải thay đổi ở các nơi khác trong file cshtml
+	var photo = "/images/info.svg";
+
+	List<string> list = new List<string>() { "C#", "Java", "PHP"};
+}
+
+<table class="border">
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Age</td>
+		<td>Gender</td>
+		<td><img src="@photo" width="36px" height="36px" id="avatar"/></td>
+	</tr>
+	<tr>
+		<td>@id</td>
+		<td>@name</td>
+		<td>@(DateTime.Now.Year - year)</td>
+		<td>@(gender ? "Male" : "Female")</td>
+		<td>
+			@foreach(var i in list)
+			{
+				<span>@i</span>
+				<br/>
+			}
+		</td>
+	</tr>
+</table>
