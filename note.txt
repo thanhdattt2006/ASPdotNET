@@ -19,4 +19,7 @@ www.google.com
 <==> www.google.com/controller/action
 
 1) khi tạo controller nào, view mặc định sẽ có thư mục của controller đó
+
 2) action trong controller sẽ tương ứng với view có tên giống action đó
+
+3) wwwroot: thư mục gốc chứa các file tĩnh như hình ảnh, css, js,... đc sử dụng trong web. Khi người dùng truy cập vào các file trong wwwroot, họ sẽ sử dụng đường dẫn tương đối từ thư mục này. Ví dụ, nếu bạn có một hình ảnh nằm trong wwwroot/images/logo.png, người dùng sẽ truy cập vào nó thông qua đường dẫn /images/logo.png trên trình duyệt. Thư mục wwwroot giúp tổ chức và quản lý các tài nguyên tĩnh của ứng dụng web một cách hiệu quả.
