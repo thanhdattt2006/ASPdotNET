@@ -16,3 +16,8 @@ table.border th, table.border td {
     border: 1px solid gray;
     padding: 6px;
 }
+
+table.border td[colspan] {
+    text-align: right;
+    font-weight: bold;
+}

@@ -8,6 +8,6 @@ app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Product}/{action=Index}");
+    pattern: "{controller=ReviewViewBag}/{action=Index}");
 
 app.Run();

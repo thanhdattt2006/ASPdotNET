@@ -1,0 +1,34 @@
+﻿<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container mt-4">
+	<h1 class="text-center">Review ViewBag</h1>
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped table-hover">
+			<caption>@ViewBag.Message</caption>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Status</th>
+					<th>Mfg</th>
+					<th>Photo</th>
+					<th>Quantity</th>
+					<th>String</th>
+					<th>Annoumous Object</th>
+				</tr>
+			</thead>
+				<tr>
+					<td>@ViewBag.Id</td>
+					<td>@ViewBag.Name</td>
+					<td>@ViewBag.Price</td>
+					<td>@(ViewBag.Status ? "In stock" : "Not in stock")</td>
+					<td>@ViewBag.Mfg</td>
+					<td><img src="@ViewBag.Photo" alt="Photo" width="60" height="40"/></td>
+					<td>@ViewBag.Quantity</td>
+					<td>@string.Join(", ", ViewBag.Array)</td>
+				<td>@ViewBag.AnnoymousObject.Id - @ViewBag.AnnoymousObject.Name - @ViewBag.AnnoymousObject.Status</td>
+				</tr>
+		</table>
+	</div>
+</div>
+
