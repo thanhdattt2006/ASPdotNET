@@ -1,0 +1,62 @@
+﻿@using StageThree.Models
+<link rel="stylesheet" href="~/css/style.css" />
+@*
+	để dùng model trong View thì phải khai báo @using StageThree.Models ở đầu file
+*@
+
+@{
+	List<Product> list = [
+	new Product {
+		Id = 1,
+		Name = "Iphone 14 Pro Max",
+		Price = 30000000,
+		Mfg = DateTime.Now,
+		Photo = "house.svg",
+		Status = true,
+		Quantity = 10
+	},
+	new Product {
+		Id = 2,
+		Name = "Iphone 15 Pro Max",
+		Price = 35000000,
+		Mfg = DateTime.Now,
+		Photo = "info.svg",
+		Status = false,
+		Quantity = 0
+	},
+	new Product {
+		Id = 3,
+		Name = "Iphone 16 Pro Max",
+		Price = 40000000,
+		Mfg = DateTime.Now,
+		Photo = "user.svg",
+		Status = true,
+		Quantity = 5
+	}
+	];
+}
+
+<table class="border">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Status</th>
+			<th>Mfg</th>
+			<th>Photo</th>
+		</tr>
+	</thead>
+	@foreach(var item in list) {
+		<tr>
+			<td>@item.Id</td>
+			<td>@item.Name</td>
+			<td>@item.Price</td>
+			<td>@item.Quantity</td>
+			<td>@(item.Status ? "In stock" : "Not in stock")</td>
+			<td>@item.Mfg</td>
+			<td><img src="~/images/@item.Photo" alt="Photo" width="60" height="40"/></td>
+		</tr>
+	}
+</table>
