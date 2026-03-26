@@ -8,6 +8,6 @@ app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=ReviewViewBag}/{action=Index}");
+    pattern: "{controller=StronglyTypeView}/{action=CallTempData}");
 
 app.Run();

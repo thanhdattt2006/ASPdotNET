@@ -23,3 +23,7 @@ www.google.com
 2) action trong controller sẽ tương ứng với view có tên giống action đó
 
 3) wwwroot: thư mục gốc chứa các file tĩnh như hình ảnh, css, js,... đc sử dụng trong web. Khi người dùng truy cập vào các file trong wwwroot, họ sẽ sử dụng đường dẫn tương đối từ thư mục này. Ví dụ, nếu bạn có một hình ảnh nằm trong wwwroot/images/logo.png, người dùng sẽ truy cập vào nó thông qua đường dẫn /images/logo.png trên trình duyệt. Thư mục wwwroot giúp tổ chức và quản lý các tài nguyên tĩnh của ứng dụng web một cách hiệu quả.
+
+4) ViewBag: là một đối tượng động trong ASP.NET MVC, cho phép bạn truyền dữ liệu từ controller đến view một cách linh hoạt mà không cần phải định nghĩa trước kiểu dữ liệu. Bạn có thể gán bất kỳ giá trị nào vào ViewBag và truy cập nó trong view để hiển thị thông tin hoặc thực hiện các thao tác khác. Ví dụ:
+
+5) Strongly-typed View(viewmodel) tương tự viewbag: là một loại view trong ASP.NET MVC mà bạn có thể sử dụng để truyền dữ liệu từ controller đến view một cách an toàn về kiểu dữ liệu. Khi bạn tạo một strongly-typed view, bạn sẽ chỉ định kiểu dữ liệu cụ thể mà view sẽ nhận, giúp tránh lỗi khi truy cập các thuộc tính hoặc phương thức của đối tượng trong view. Ví dụ:
