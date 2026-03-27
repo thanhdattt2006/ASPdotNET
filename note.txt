@@ -27,3 +27,7 @@ www.google.com
 4) ViewBag: là một đối tượng động trong ASP.NET MVC, cho phép bạn truyền dữ liệu từ controller đến view một cách linh hoạt mà không cần phải định nghĩa trước kiểu dữ liệu. Bạn có thể gán bất kỳ giá trị nào vào ViewBag và truy cập nó trong view để hiển thị thông tin hoặc thực hiện các thao tác khác. Ví dụ:
 
 5) Strongly-typed View(viewmodel) tương tự viewbag: là một loại view trong ASP.NET MVC mà bạn có thể sử dụng để truyền dữ liệu từ controller đến view một cách an toàn về kiểu dữ liệu. Khi bạn tạo một strongly-typed view, bạn sẽ chỉ định kiểu dữ liệu cụ thể mà view sẽ nhận, giúp tránh lỗi khi truy cập các thuộc tính hoặc phương thức của đối tượng trong view. Ví dụ:
+
+6) Convention Route (theo quy ước) và Attribute Route (theo thuộc tính):
+	a) convention route nằm ở program.cs,, định nghĩa các quy tắc chung cho tất cả các route trong ứng dụng,
+	ví dụ: localhost:xxxx/{controller}/{action}/{id?} -> nhanh, gọn, lẹ

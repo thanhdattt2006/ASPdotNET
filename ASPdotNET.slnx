@@ -3,6 +3,7 @@
     <File Path="note.txt" />
   </Folder>
   <Project Path="ASPdotNET/StageOne.csproj" />
+  <Project Path="StageFour/StageFour.csproj" Id="f6082f5b-d4f2-45e3-9d3e-64815c0e07a6" />
   <Project Path="StageThree/StageThree.csproj" Id="280b3d30-7efe-4180-b2ff-f32fa40bbc7a" />
   <Project Path="StageTwo/StageTwo.csproj" Id="23081568-2f4f-4247-8bbf-7df963058401" />
 </Solution>
