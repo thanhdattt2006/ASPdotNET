@@ -31,3 +31,6 @@ www.google.com
 6) Convention Route (theo quy ước) và Attribute Route (theo thuộc tính):
 	a) convention route nằm ở program.cs,, định nghĩa các quy tắc chung cho tất cả các route trong ứng dụng,
 	ví dụ: localhost:xxxx/{controller}/{action}/{id?} -> nhanh, gọn, lẹ
+
+	b) attribute route được định nghĩa trực tiếp trên controller hoặc action bằng cách sử dụng các thuộc tính như [Route("path")] hoặc [HttpGet("path")], cho phép bạn tùy chỉnh đường dẫn cụ thể cho từng endpoint, giúp tăng tính linh hoạt và rõ ràng trong việc quản lý các route của ứng dụng nhưng có thể làm cho code trở nên rối rắm nếu sử dụng quá nhiều.
+

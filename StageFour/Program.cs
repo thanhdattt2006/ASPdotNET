@@ -11,9 +11,16 @@ app.UseStaticFiles();
 // localhost:xxxx/controller/action/id
 // localhost:xxxx/home/index/1
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index1}/{fullname?}/{gender?}"
-);
+#region ConventionRoute    
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index1}/{fullname?}/{gender?}"
+//);
+#endregion
+
+app.UseRouting();
+
+// dùng Attribute Route
+app.MapControllers();
 
 app.Run();
