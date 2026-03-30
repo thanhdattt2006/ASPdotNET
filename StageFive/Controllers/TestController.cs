@@ -29,4 +29,12 @@ public class TestController : Controller
         ViewBag.Fullname = _testService.GetFullName(fullname ?? "");
         return View();
     }
+
+    [Route("index2")]
+    public IActionResult Index2()
+    {
+        ViewBag.Fullname = _testService.GetFullName("Dave");
+        ViewBag.Message = _testService.GetMessage();
+        return View();
+    }
 }
