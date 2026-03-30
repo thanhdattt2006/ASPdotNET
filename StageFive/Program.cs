@@ -1,5 +1,10 @@
+using StageFive.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ITestService, TestService>();
+//builder.Services.AddTransient();
+//builder.Services.AddSingleton();
 
 var app = builder.Build();
 app.UseStaticFiles();

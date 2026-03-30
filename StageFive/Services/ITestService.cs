@@ -4,7 +4,7 @@ public interface ITestService
 {
     string GetMessage();
 
-    string getFullName(string fullname);
+    string GetFullName(string fullname);
 
 
 }
