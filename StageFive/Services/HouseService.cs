@@ -1,7 +1,7 @@
 ﻿namespace StageFive.Services;
 
-public class HouseService : IHouseService
+public class HouseService(ICalcService calcService) : IHouseService
 {
-    public double Area(double length, double width) => CalcService.Multiply(width , length);
-    public double Perimeter(double length, double width) => CalcService.Sum(width,length) *  2;
+    public double Area(double x, double y) => calcService.Multiply(x, y);
+    public double Perimeter(double x, double y) => calcService.Sum(x, y) * 2;
 }
