@@ -1,12 +1,7 @@
-using StageFive.Services;
+using StageFive.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ITestService, TestService>();
-builder.Services.AddScoped<ICalcService, CalcService>();
-builder.Services.AddScoped<IProductService, ProductService>();
-//builder.Services.AddTransient();
-//builder.Services.AddSingleton();
+builder.Services.AddCustomServices();
 
 var app = builder.Build();
 app.UseStaticFiles();

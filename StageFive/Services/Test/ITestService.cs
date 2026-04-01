@@ -1,4 +1,4 @@
-﻿namespace StageFive.Services;
+﻿namespace StageFive.Services.Test;
 
 public interface ITestService
 {

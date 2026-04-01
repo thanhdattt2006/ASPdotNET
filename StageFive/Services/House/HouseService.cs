@@ -1,4 +1,6 @@
-﻿namespace StageFive.Services;
+﻿using StageFive.Services.Calc;
+
+namespace StageFive.Services;
 
 public class HouseService(ICalcService calcService) : IHouseService
 {
