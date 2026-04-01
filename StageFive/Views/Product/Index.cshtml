@@ -1,0 +1,20 @@
+﻿@using StageFive.Models
+<table border="1">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Product product in ViewBag.AllProducts)
+		{
+			<tr>
+				<td>@product.Name</td>
+				<td>@product.Price.ToString("C")</td>
+				<td>@product.Quantity</td>
+			</tr>
+		}
+	</tbody>
+</table>
