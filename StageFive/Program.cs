@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ITestService, TestService>();
 builder.Services.AddScoped<ICalcService, CalcService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 //builder.Services.AddTransient();
 //builder.Services.AddSingleton();
 
