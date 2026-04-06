@@ -1,6 +1,6 @@
 ﻿using StageFive.Models;
 
-namespace StageFive.Services;
+namespace StageFive.Services.Product;
 
 public class ProductService : IProductService
 {

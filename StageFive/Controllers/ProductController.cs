@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StageFive.Services;
+using StageFive.Services.Product;
 
 namespace StageFive.Controllers;
 

@@ -1,6 +1,6 @@
 ﻿using StageFive.Services.Calc;
 
-namespace StageFive.Services;
+namespace StageFive.Services.House;
 
 public class HouseService(ICalcService calcService) : IHouseService
 {
