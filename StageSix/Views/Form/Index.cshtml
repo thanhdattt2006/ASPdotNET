@@ -10,3 +10,42 @@
 		<button type="submit">Submit</button>
 	</fieldset>
 </form>
+
+@* Dùng tag helper *@
+<form asp-controller="Form" asp-action="ShowNameAndQuantity" method="get">
+	<fieldset style="width: fit-content">
+		<legend>2) Tag helper contain ViewBag</legend>
+		<label for="fullname">Fullname: </label>
+		<input type="text" name="fullname" id="name" />
+		<label for="quantity">Quantity: </label>
+		<input type="text" name="quantity" id="number" />
+		<button type="submit">Submit</button>
+	</fieldset>
+</form>
+
+@* Dùng tag helper Request.Query chỉ dùng khi method GET 
+   Dùng action ko cần tham số mà tự bóc tách trên addressbar vào
+*@
+<form asp-controller="Form" asp-action="ShowNameAndQuantityRequestQuery" method="get">
+	<fieldset style="width: fit-content">
+		<legend>3) Tag helper using Request.Query</legend>
+		<label for="fullname">Fullname: </label>
+		<input type="text" name="fullname" id="name" />
+		<label for="quantity">Quantity: </label>
+		<input type="text" name="quantity" id="number" />
+		<button type="submit">Submit</button>
+	</fieldset>
+</form>
+
+@* Request form POST
+*@
+<form asp-controller="Form" asp-action="ShowNameAndQuantityRequestForm" method="post">
+	<fieldset style="width: fit-content">
+		<legend>4) POST request form</legend>
+		<label for="fullname">Fullname: </label>
+		<input type="text" name="fullname" id="name" />
+		<label for="quantity">Quantity: </label>
+		<input type="text" name="quantity" id="number" />
+		<button type="submit">Submit</button>
+	</fieldset>
+</form>
