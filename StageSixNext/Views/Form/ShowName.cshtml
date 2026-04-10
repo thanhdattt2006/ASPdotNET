@@ -1,0 +1,4 @@
+﻿@model string
+<h1>Day la action ShowName cua FormController</h1>
+<p>Fullname: @(string.IsNullOrWhiteSpace(Model) ? "empty" : Model)</p>
+<a asp-controller="Form" asp-action="Index">Quay lai action Index cua FormController</a>
