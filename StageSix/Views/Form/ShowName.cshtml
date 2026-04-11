@@ -1,3 +1,4 @@
-﻿<h1>This is action view of ShowNameController</h1>
-<strong>Fullname: @(string.IsNullOrWhiteSpace(Model) ? "unknown" : Model)</strong><br /><br />
-<button><a asp-controller="form" asp-action="index">Back</a></button>
+﻿@model string
+<h1>đây là action showview của formcontroller</h1>
+<p>Fullname: @(string.IsNullOrWhiteSpace(Model) ? "empty" : Model)</p>
+<a asp-controller="form" asp-action="index">quay lại action index của form controller</a>

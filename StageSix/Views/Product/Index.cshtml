@@ -2,34 +2,45 @@
 
 <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-<h1>Day la action Index cua ProductController</h1>
+<form asp-controller="Product" asp-action="Search" method="get">
+    <label for="search">search:</label>
+    <input type="text" id="search" name="search" />
+    <button type="submit">Search</button>
+</form>
+<hr/>
+
+<h1>đây là action Index của ProductController</h1>
 <div class="container">
-	<h2>danh sach san pham</h2>
-	<div class="table-responsive">
-		<table class="table table-hover table-bordered table-striped">
-			<thead class="table-dark">
-				<tr>
-					<th>id</th>
-					<th>name</th>
-					<th>photo</th>
-					
-					<th>details</th>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach(var item in Model)
-				{
-					<tr>
-						<td>@item.Id</td>
-						<td>@item.Name</td>
-						<td><img src="~/images/@item.Photo" alt="@item.Name" width="100" /></td>
-						
-						<td><a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">Xem chi tiet</a></td>
-					</tr>
-				}
-)
-			</tbody>
-		</table>
-	</div>
+    <h2>danh sách sản phẩm</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>photo</th>
+                    <th>status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>
+                           <img src="~/images/@item.Photo" alt="@item.Name" width="50" />
+                        </td>
+                        <td>@item.StatusDisplay</td>
+                        <td>
+                            <a asp-controller="product" asp-action="details" 
+                            asp-route-id="@item.Id">Xem chi tiết</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
-<a asp-controller="Home" asp-action="Index">Di ve HomeController</a>
+<a asp-controller="home" asp-action="index">đi về home</a>

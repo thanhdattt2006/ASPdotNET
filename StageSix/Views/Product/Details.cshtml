@@ -1,33 +1,36 @@
 ﻿@model Product
 <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<h1>Day la action Details cua ProductController</h1>
+<h1>đây là action Details của ProductController</h1>
 <div class="container">
-	<h2>danh sach san pham</h2>
-	<div class="table-responsive">
-		<table class="table table-hover table-bordered table-striped">
-			<thead class="table-dark">
-				<tr>
-					<th>id</th>
-					<th>name</th>
-					<th>photo</th>
-					<th>status</th>
-					<th>mfg</th>
-					<th>price</th>
-					<th>quantity</th>
-				</tr>
-			</thead>
-			<tbody>
-					<tr>
-						<td>@Model.Id</td>
-						<td>@Model.Name</td>
-						<td><img src="~/images/@Model.Photo" alt="@Model.Name" width="100" /></td>
-						<td>@(Model.Status?"Active":"Inactive")</td>
-						<td>@Model.Mfg.ToString("dd/MM/yyyy")</td>
-						<td>@Model.Price</td>
-						<td>@Model.Quantity</td>
-					</tr>
-			</tbody>
-		</table>
-	</div>
+    <h2>danh sách sản phẩm</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>photo</th>
+                    <th>status</th>
+                    <th>mfg</th>
+                    <th>price</th>
+                    <th>quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>
+                        <img src="~/images/@Model.Photo" alt="@Model.Name" width="50" />
+                    </td>
+                    <td>@(Model.Status ? "Active" : "Inactive")</td>
+                    <td>@Model.Mfg.ToString("dd/MM/yyyy")</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.Quantity</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-<a asp-contronller="Product" asp-action="Index">Quay lai trang product</a>
+
+<a asp-controller="Product" asp-action="Index">quay lại trang product</a>

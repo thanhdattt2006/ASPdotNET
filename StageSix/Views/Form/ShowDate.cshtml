@@ -1,1 +1,9 @@
-﻿<h1>Day la action ShowDate cua FormController</h1>
+﻿<h1>view showdate của action showdate formcontroller</h1>
+@if(ViewBag.Dob != null)
+{
+    <p>Ngày tháng năm bạn chọn là: @ViewBag.Dob.ToString("dd/MM/yyyy")</p>
+}
+else
+{
+    <p>Không có ngày tháng năm hợp lệ được chọn.@ViewBag.Error</p>
+}

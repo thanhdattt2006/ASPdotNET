@@ -1,15 +1,19 @@
-using StageSix.Extensions;
+﻿
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews(); //dùng mvc core
+builder.Services.AddServices(); //đăng ký service vào DI container (thư mục Extensions)
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllersWithViews();
-builder.Services.AddServices();
-var app = builder.Build();
-app.UseStaticFiles();
+WebApplication app = builder.Build();
+app.UseStaticFiles(); //dùng wwwroot
+app.UseRouting();//dùng routing
 
-app.UseRouting();
-
+//convention route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action}"
 );
+
+//attribute route 
+app.MapControllers();
+
 app.Run();

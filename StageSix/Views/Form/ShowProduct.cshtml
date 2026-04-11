@@ -1,7 +1,12 @@
 ﻿@model Product
-<h1>Day la aciton ShowProduct cua FormController</h1>
-<p>Name: @(Model.Name ?? "empty")</p>
-<p>Quantity: @Model.Quantity</p>
 
-@* Over-posting lay du thua thuoc tinh cua model product trong view nhu vi du o duoi *@
-<p>Price: @Model.Price</p>
+@{
+    var product = Model;
+}
+
+<h1>đây là action ShowProduct của formcontroller</h1>
+<p>name: @(Model.Name ?? "empty")</p>
+<p>quantity: @Model.Quantity</p>
+
+@* Over-posting lấy dư thừa trong view*@
+<p>price: @product.Price</p>

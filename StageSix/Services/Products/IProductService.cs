@@ -1,9 +1,9 @@
-﻿
-
-namespace StageSix.Services.Products;
+﻿namespace StageSix.Services.Products;
 
 public interface IProductService
 {
-    IEnumerable<Product> GetProducts();
-    public Product? GetProductById(int id);
+  IEnumerable<Product> GetProducts();
+  Product? GetProductById(int id);
+
+  List<Product> FilterByAnyKeyword(string keyword);
 }
