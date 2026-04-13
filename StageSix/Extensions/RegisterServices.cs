@@ -1,6 +1,4 @@
-﻿
-
-namespace StageSix.Extensions;
+﻿namespace StageSix.Extensions;
 
 public static class RegisterServices
 {
@@ -8,6 +6,9 @@ public static class RegisterServices
   {
     services.AddScoped<IProductService, ProductService>();
     services.AddScoped<IUploadService, UploadService>();
+    services.AddScoped<IAccountService, AccountService>();
     return services;
   }
+
+
 }

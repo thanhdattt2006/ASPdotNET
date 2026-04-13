@@ -8,4 +8,5 @@ global using StageSix.Services;
 global using StageSix.Services.Products;
 global using StageSix.ViewModels.Products;
 global using StageSix.ViewModels.Uploads;
+global using StageSix.Services.Accounts;
 
