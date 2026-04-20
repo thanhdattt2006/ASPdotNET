@@ -1,5 +1,5 @@
 ﻿
-namespace StageSix.Controllers;
+namespace StageSeven.Controllers;
 
 [Route("upload")]
 public class UploadController(IUploadService upl) : Controller

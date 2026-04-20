@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace StageSix.Services.Accounts;
+namespace StageSeven.Services.Accounts;
 
 public class AccountService : IAccountService
 {

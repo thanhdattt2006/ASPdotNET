@@ -1,5 +1,5 @@
 ﻿
-namespace StageSix.ViewModels.Products;
+namespace StageSeven.ViewModels.Products;
 
 public class ProductViewModel
 {

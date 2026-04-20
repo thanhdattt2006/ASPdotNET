@@ -2,11 +2,11 @@
 
 global using Microsoft.AspNetCore.Mvc;
 
-global using StageSix.Extensions;
-global using StageSix.Models;
-global using StageSix.Services;
-global using StageSix.Services.Products;
-global using StageSix.ViewModels.Products;
-global using StageSix.ViewModels.Uploads;
-global using StageSix.Services.Accounts;
+global using StageSeven.Extensions;
+global using StageSeven.Models;
+global using StageSeven.Services;
+global using StageSeven.Services.Products;
+global using StageSeven.ViewModels.Products;
+global using StageSeven.ViewModels.Uploads;
+global using StageSeven.Services.Accounts;
 

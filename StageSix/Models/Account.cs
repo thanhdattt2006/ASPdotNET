@@ -1,4 +1,4 @@
-﻿namespace StageSix.Models;
+﻿namespace StageSeven.Models;
 
 public class Account
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace StageSix.Controllers;
+namespace StageSeven.Controllers;
 
 [Route("Account")]
 public class AccountController (IAccountService acc) : Controller

@@ -1,17 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace StageSeven.Controllers;
+﻿namespace StageSeven.Controllers;
 
 [Route("san-pham")]
-public class ProductController : Controller
+public class ProductController(IProductService pro) : Controller
 {
-  private readonly IProductService pro;
-
-  public ProductController(IProductService pro) => this.pro = pro;
-
   [Route("danh-sach")] //localhost:port/Product/Index sẽ vào đây
   [Route("")] //action mặc định localhost:port/Product sẽ vào đây
-  //[HttpGet("~/")] //override default route, localhost:port/ sẽ vào đây
+  [HttpGet("~/")] //override default route, localhost:port/ sẽ vào đây
   public IActionResult Index() => View(pro.GetProducts());
 
   //truyền theo dang query string: localhost:port/san-pham/chi-tiet?id=1

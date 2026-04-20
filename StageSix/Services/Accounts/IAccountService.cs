@@ -1,4 +1,4 @@
-﻿namespace StageSix.Services.Accounts;
+﻿namespace StageSeven.Services.Accounts;
 
 public interface IAccountService
 {
