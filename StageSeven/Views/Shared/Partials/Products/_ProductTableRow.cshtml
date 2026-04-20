@@ -1,0 +1,17 @@
+﻿@Model Product
+<tr>
+    <td>@Model.Id</td>
+    <td>@Model.Name</td>
+    <td>
+        <img src="~/images/@Model.Photo" alt="@Model.Name" width="50" />
+    </td>
+    <td>@Model.StatusDisplay</td>
+    <td>
+        <a asp-controller="product" asp-action="details"
+           asp-route-id="@Model.Id">View</a>
+        <a asp-controller="product" asp-action="edit"
+           asp-route-id="@Model.Id">Edit</a>
+        <a asp-controller="product" asp-action="delete"
+           asp-route-id="@Model.Id">Delete</a>
+    </td>
+</tr>

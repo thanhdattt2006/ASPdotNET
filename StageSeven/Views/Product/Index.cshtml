@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<Product>
 
-<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Product Index";
+}
 
 <form asp-controller="Product" asp-action="Search" method="get">
     <label for="search">search:</label>
@@ -20,24 +22,13 @@
                     <th>name</th>
                     <th>photo</th>
                     <th>status</th>
-                    <th>Details</th>
+                    <th>action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach(var item in Model)
                 {
-                    <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>
-                           <img src="~/images/@item.Photo" alt="@item.Name" width="50" />
-                        </td>
-                        <td>@item.StatusDisplay</td>
-                        <td>
-                            <a asp-controller="product" asp-action="details" 
-                            asp-route-id="@item.Id">Xem chi tiết</a>
-                        </td>
-                    </tr>
+					<partial name="Partials/Products/_ProductTableRow" model="item" />
                 }
             </tbody>
         </table>
