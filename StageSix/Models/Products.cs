@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace StageSeven.Models;
+namespace StageSix.Models;
 
 public class Product
 {

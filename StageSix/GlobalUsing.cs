@@ -1,12 +1,16 @@
 ﻿global using System.Globalization;
+global using System.Security.Claims;
 
+global using Microsoft.AspNetCore.Authentication;
+global using Microsoft.AspNetCore.Authentication.Cookies;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Identity;
 global using Microsoft.AspNetCore.Mvc;
 
-global using StageSeven.Extensions;
-global using StageSeven.Models;
-global using StageSeven.Services;
-global using StageSeven.Services.Products;
-global using StageSeven.ViewModels.Products;
-global using StageSeven.ViewModels.Uploads;
-global using StageSeven.Services.Accounts;
-
+global using StageSix.Extensions;
+global using StageSix.Models;
+global using StageSix.Services.Accounts;
+global using StageSix.Services.Products;
+global using StageSix.Services.Uploads;
+global using StageSix.ViewModels.Products;
+global using StageSix.ViewModels.Uploads;

@@ -3,25 +3,28 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css"/>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/site.js" defer></script>
+    @RenderSection("ExtraCSS", required: false)
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-			<partial name="Partials/_Header" />
+            <partial name="Partials/_Header" />
         </div>
 
         <div class="row">
-            <partial name="Partials/_Sidebar" />
+            <partial name="Partials/_Left" />
             <div class="col-md-9">
-			    @RenderBody()
-		    </div>
+                @RenderBody()
+            </div>
         </div>
+
         <div class="row">
             <partial name="Partials/_Footer" />
         </div>
     </div>
-    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

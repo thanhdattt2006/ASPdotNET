@@ -1,5 +1,4 @@
-﻿
-namespace StageSeven.Services;
+﻿namespace StageSix.Services.Uploads;
 
 public interface IUploadService
 {

@@ -1,10 +1,12 @@
 ﻿
-namespace StageSeven.Controllers;
+using StageSix.Services.Uploads;
+
+namespace StageSix.Controllers;
 
 [Route("upload")]
 public class UploadController(IUploadService upl) : Controller
 {
-  [HttpGet("~/")]
+  //[HttpGet("~/")]
   [Route("")]
   [Route("index")]
   public IActionResult Index() => View();

@@ -1,4 +1,4 @@
-﻿namespace StageSeven.Services.Products;
+﻿namespace StageSix.Services.Products;
 
 public class ProductService : IProductService
 {

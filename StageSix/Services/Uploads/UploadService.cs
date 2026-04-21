@@ -1,4 +1,4 @@
-﻿namespace StageSeven.Services.Products;
+﻿namespace StageSix.Services.Uploads;
 
 public class UploadService(IWebHostEnvironment env) : IUploadService
 {

@@ -1,34 +1,34 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace StageSeven.Services.Accounts;
+﻿namespace StageSix.Services.Accounts;
 
 public class AccountService : IAccountService
 {
-    private static List<Account> Database { get; } = [];
-    private readonly PasswordHasher<string> hasher = new();
+  private static List<Account> Database { get; } = [];
+  private readonly PasswordHasher<string> hasher = new();
 
-    public bool Login(string username, string password)
+  public string Register(string username, string password)
+  {
+    if(Database.Any(a => a.Username == username))
+      return "Username already exists.";
+
+    Account account = new()
     {
-        Account? account = Database.FirstOrDefault(a => a.Username == username);
-        if (account is null) return false;
+      Username = username,
+      Password = hasher.HashPassword(username, password)
+    };
 
-        PasswordVerificationResult result = hasher.VerifyHashedPassword(username, account.Password, password);
+    Database.Add(account);
+    return "Account registered successfully.";
+  }
 
-        return result == PasswordVerificationResult.Success;
-    }
+  public bool Login(string username, string password)
+  {
+    Account? account = Database.SingleOrDefault(a => a.Username == username);
 
-    public string Register(string username, string password)
-    {
-        if (Database.Any(a => a.Username == username))
-            return "Username already exist";
+    if(account is null)
+      return false;
 
-        Account account = new()
-        {
-            Username = username,
-            Password = hasher.HashPassword(username, password)
-        };
+    PasswordVerificationResult result = hasher.VerifyHashedPassword(username, account.Password, password);
 
-        Database.Add(account);
-        return "Account registered successfully";
-    }
+    return result == PasswordVerificationResult.Success;
+  }
 }

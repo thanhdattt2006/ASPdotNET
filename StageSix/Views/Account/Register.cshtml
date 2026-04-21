@@ -1,24 +1,19 @@
 ﻿@model Account
-@if (TempData["Message"] is not null)
-{
-	<div style="color: green">@(TempData["Message"])</div>
-}
 
 <form method="post" asp-controller="Account" asp-action="Register">
-	<fieldset style="width: fit-content">
-		<legend>Register</legend>
-		<label asp-for="Username">Username</label>
-		<input asp-for="Username" placeholder="Enter username" / checked>
-		<br />
-		<label asp-for="Password">Password</label>
-		<input asp-for="Password" placeholder="Enter password" checked>
-		<button type="submit">Register</button>
-	</fieldset>
+    <fieldset style="width:fit-content">
+        <legend>Register</legend>
+        <label asp-for="Username">Username:</label>
+        <input asp-for="Username" placeholder="enter username" />
+        <label asp-for="Password">Password:</label>
+        <input asp-for="Password" type="password" placeholder="enter password" />
+        <button type="submit">Register</button>
+    </fieldset>
 </form>
 
-@if (ViewBag.ErrorMessage is not null)
+@if(ViewBag.ErrorMessage is not null)
 {
-	<div style="color: red">@ViewBag.ErrorMessage</div>
+    <div style="color:red">@ViewBag.ErrorMessage</div>
 }
 
-<a asp-controller="Account" asp-action="Login">Already have account ? Let login</a>
+<a asp-controller="Account" asp-action="Login">đã có tài khoản? vui lòng đăng nhập tại đây ngay</a>

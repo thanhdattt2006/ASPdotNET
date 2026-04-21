@@ -1,4 +1,4 @@
-﻿namespace StageSeven.Extensions;
+﻿namespace StageSix.Extensions;
 
 public static class RegisterServices
 {
@@ -9,6 +9,4 @@ public static class RegisterServices
     services.AddScoped<IAccountService, AccountService>();
     return services;
   }
-
-
 }

@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace StageSeven.Controllers;
+﻿namespace StageSix.Controllers;
 
 [Route("san-pham")]
+//[Authorize]
 public class ProductController : Controller
 {
   private readonly IProductService pro;

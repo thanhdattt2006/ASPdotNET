@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace StageSeven.Controllers;
+namespace StageSix.Controllers;
 
 [Route("home")]
 public class HomeController : Controller

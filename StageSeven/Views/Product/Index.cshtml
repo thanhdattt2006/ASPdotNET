@@ -9,7 +9,7 @@
     <input type="text" id="search" name="search" />
     <button type="submit">Search</button>
 </form>
-<hr/>
+<hr />
 
 <h1>đây là action Index của ProductController</h1>
 <div class="container">
@@ -28,9 +28,15 @@
             <tbody>
                 @foreach(var item in Model)
                 {
-					<partial name="Partials/Products/_ProductTableRow" model="item" />
+                    <partial name="Partials/Products/_ProductTableRow" model="item" />
                 }
             </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        alert("đây là view Index của ProductController");
+    </script>
+}

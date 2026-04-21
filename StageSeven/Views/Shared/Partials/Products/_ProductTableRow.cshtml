@@ -1,4 +1,4 @@
-﻿@Model Product
+﻿@model Product
 <tr>
     <td>@Model.Id</td>
     <td>@Model.Name</td>
@@ -7,11 +7,11 @@
     </td>
     <td>@Model.StatusDisplay</td>
     <td>
-        <a asp-controller="product" asp-action="details"
-           asp-route-id="@Model.Id">View</a>
-        <a asp-controller="product" asp-action="edit"
-           asp-route-id="@Model.Id">Edit</a>
-        <a asp-controller="product" asp-action="delete"
+        <a asp-controller="Product" asp-action="Details"
+           asp-route-id="@Model.Id">Details</a> |
+        <a asp-controller="Product" asp-action="Edit"
+           asp-route-id="@Model.Id">Edit</a> |
+        <a asp-controller="Product" asp-action="Delete"
            asp-route-id="@Model.Id">Delete</a>
     </td>
 </tr>

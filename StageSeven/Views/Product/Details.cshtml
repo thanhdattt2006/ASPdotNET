@@ -1,6 +1,9 @@
 ﻿@model Product
-<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<link href="~/css/Details.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
 <h1>đây là action Details của ProductController</h1>
 <div class="container">
     <h2>danh sách sản phẩm</h2>
@@ -35,3 +38,9 @@
 </div>
 
 <a asp-controller="Product" asp-action="Index">quay lại trang product</a>
+
+@section ExtraCSS{
+   <link href="~/css/Details.css" rel="stylesheet" />
+}
+
+                      
