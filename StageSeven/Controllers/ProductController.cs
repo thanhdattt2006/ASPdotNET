@@ -5,7 +5,7 @@ public class ProductController(IProductService pro) : Controller
 {
   [Route("danh-sach")] //localhost:port/Product/Index sẽ vào đây
   [Route("")] //action mặc định localhost:port/Product sẽ vào đây
-  [HttpGet("~/")] //override default route, localhost:port/ sẽ vào đây
+  //[HttpGet("~/")] //override default route, localhost:port/ sẽ vào đây
   public IActionResult Index() => View(pro.GetProducts());
 
   //truyền theo dang query string: localhost:port/san-pham/chi-tiet?id=1

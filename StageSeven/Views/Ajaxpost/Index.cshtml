@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Ajaxpost Index";
+}
+
+<h1>đây là view index của ajax post controller</h1>
+
+<input type="text" id="txtName" value="" placeholder="enter your name" />
+<button id="btnSend" type="button">Click Me</button>
+<p id="resultName"></p>
+
+<hr />
+
+<input type="text" id="txtFullName" value="" placeholder="enter your full name" />
+<input type="text" id="txtAge" value="" placeholder="enter your age" />
+<button id="btnSendPerson" type="button">Click Me (person)</button>
+<p id="resultPerson"></p>
+
+@section Scripts {
+    <script>
+        document.getElementById("btnSend").addEventListener("click",
+        async () => {
+              //lấy dữ liệu từ input gửi lên server
+            const name = document.getElementById("txtName").value;
+            try {
+
+                const response = await fetch("/ajaxpost/get-name", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json; charset=UTF-8"
+                    },
+                    body: JSON.stringify(name)
+                });
+                const data = await response.json();
+                // JSON property names may be camelCased (fullName) when serialized from .NET.
+                // Try both variants to avoid 'undefined'.
+                document.getElementById("resultName").textContent = data.fullName ?? data.fullname;
+            } catch (error) {
+                console.error("Error: " + error);
+            }
+          });
+
+
+           document.getElementById("btnSendPerson").addEventListener("click",
+           async () => {
+                var checkname = document.getElementById("txtFullName").value;
+                var checkage = document.getElementById("txtAge").value;
+
+                if(!checkname) {
+                  document.getElementById("resultPerson").innerHTML = "<b style='color:red'>name is required</b>";    
+                  return;
+                }
+
+                if(!/^\d+$/.test(checkage)) {
+                      document.getElementById("resultPerson").innerHTML = "<b style='color:red'>age must be a number</b>";
+                    return;
+                }
+
+                var ageValue = parseInt(checkage);
+                if(ageValue<0 || ageValue>150) {
+                      document.getElementById("resultPerson").innerHTML = "<b style='color:red'>age must be between 0 and 150</b>";
+                    return;
+                }
+
+               const person = {
+               Name: checkname ||'',
+               Age: parseInt(checkage) || 0
+               };
+
+               try {
+                   const response = await fetch("/ajaxpost/get-person", {
+                       method: "POST",
+                       headers: {
+                           "Content-Type": "application/json; charset=UTF-8"
+                       },
+                       body: JSON.stringify(person)
+                   });
+                   const data = await response.json();
+                   document.getElementById("resultPerson").textContent = `Full Name: ${data.fullname}, Age: ${data.age}`;
+               } catch (error) {
+                   console.error("Error: " + error);
+               }
+            });
+    </script>
+}
