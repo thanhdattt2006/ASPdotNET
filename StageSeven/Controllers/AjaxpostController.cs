@@ -7,7 +7,7 @@ public class AjaxpostController : Controller
 {
   [Route("index")]
   [Route("")]
-  [HttpGet]
+  //[HttpGet("~/")]
   public IActionResult Index() => View();
 
   [HttpPost("get-name")]

@@ -3,13 +3,27 @@
 @{
     ViewBag.Title = "Product Index";
 }
-
+@* tìm kiếm của mvc  *@
 <form asp-controller="Product" asp-action="Search" method="get">
     <label for="search">search:</label>
     <input type="text" id="search" name="search" />
     <button type="submit">Search</button>
 </form>
 <hr />
+
+@* tìm kiếm của ajax *@
+<form asp-controller="Product" asp-action="Search" method="get">
+    <label for="search">search:</label>
+    <input type="text" id="find" name="search" list="autocomplete-list" 
+           data-url="@Url.RouteUrl("AutoComplete")?term=__NAME__" 
+           placeholder="enter to find" autocomplete="off"
+           value="@ViewBag.Search"
+    />
+
+    <datalist id="autocomplete-list"></datalist>
+    <button type="submit" id="btnAutoComplete">Search</button>
+</form>
+
 
 <h1>đây là action Index của ProductController</h1>
 <div class="container">
@@ -36,7 +50,5 @@
 </div>
 
 @section Scripts {
-    <script>
-        alert("đây là view Index của ProductController");
-    </script>
+    <script type="module" src="~/js/product/auto-complete.js" asp-append-version="true"></script>
 }

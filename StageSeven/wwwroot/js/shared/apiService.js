@@ -1,4 +1,5 @@
-﻿const apiService = {
+﻿//javascript ES6  sử dụng module
+const apiService = {
     // 1. Cấu hình Header mặc định
     defaultHeaders: {
         'Content-Type': 'application/json; charset=utf-8',

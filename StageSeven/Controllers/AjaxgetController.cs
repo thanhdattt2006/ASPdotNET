@@ -17,8 +17,8 @@ public class AjaxgetController : Controller
 
   [HttpGet("message-json-async")]
   public async Task<IActionResult> MessageJsonAsync()
-   => //Json(new { message = "Ajax: Hello World Json Async!" });
-    await Task.FromResult(Json(new { message = "Ajax: Hello World Json Async!" }));
+   => Json(new { message = "Ajax: Hello World Json Async!" });
+   
 
   //truyền theo route localhost:xxx/ajaxget/get-name/yourname
   [HttpGet("get-name/{name}")]
