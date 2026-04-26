@@ -5,11 +5,10 @@ public class AjaxapiController : Controller
 {
   [Route("")]
   [Route("index")]
-  //[HttpGet("~/")]
+  // [HttpGet("~/")]
   public IActionResult Index() => View();
 
-  //thuộc tính Name thường trùng với tên phương thức (action)
-  //nhưng có thể khác nếu muốn
+  // thuộc tính Name thường trùng với tên phương thức (action) nhưng có thể khác nếu muốn
   [HttpGet("message-json-async", Name = "MessageJsonAsync")]
   public IActionResult MessageJsonAsync()
   => Json(new { message = "Ajax: Hello World Json Async!" });
