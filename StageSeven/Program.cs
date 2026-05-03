@@ -4,20 +4,24 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddServices();
 
+// BẬT SESSION
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
 WebApplication app = builder.Build();
 
 app.UseStaticFiles();
-//dùng route
 app.UseRouting();
-//map cho admin area
+
+// DÙNG SESSION
+app.UseSession();
+
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}"
 );
-//convention 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action}/{id?}");
-//attribute route
 app.MapControllers();
 app.Run();

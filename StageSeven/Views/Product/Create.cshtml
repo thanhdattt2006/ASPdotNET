@@ -1,0 +1,27 @@
+﻿@model Product
+@{
+    ViewBag.Title = "Thêm Sản Phẩm";
+}
+
+<h2>Thêm đồ mới</h2>
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div asp-validation-summary="All" style="color:red"></div>
+
+    <label>Tên:</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name" style="color:red"></span><br />
+
+    <label>Giá:</label>
+    <input asp-for="Price" type="number" step="0.01" />
+    <span asp-validation-for="Price" style="color:red"></span><br />
+
+    <label>Số lượng:</label>
+    <input asp-for="Quantity" type="number" /><br />
+
+    <label>Còn hàng (Status):</label>
+    <input asp-for="Status" type="checkbox" value="true" /><br />
+
+    <button type="submit">Lưu lại</button>
+</form>
+
+<a asp-controller="Product" asp-action="Index">Về danh sách</a>
