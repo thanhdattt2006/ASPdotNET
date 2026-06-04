@@ -36,7 +36,7 @@ public class ProductService : IProductService
             existing.Quantity = p.Quantity;
             existing.Status = p.Status;
             existing.Mfg = p.Mfg;
-            existing.Photo = p.Photo; // Kệ mẹ cái ảnh đi, code phèn ko cần upload
+            existing.Photo = p.Photo; 
         }
     }
 
